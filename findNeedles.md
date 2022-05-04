@@ -1,6 +1,6 @@
 ## Pre-requisites
 
 <code>
-import re </br>
+import rev </br>
 import sys
 </code>
