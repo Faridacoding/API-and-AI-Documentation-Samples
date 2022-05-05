@@ -111,7 +111,11 @@ needles='far 1'
 
 ## Sample output
 
+<!--
 <img src = "../API-Documentation-Samples/findNeedles_output.jpg" width ="300">
+-->
+
+![](https://github.com/Faridacoding/API-Documentation-Samples/blob/main/findNeedles_output.jpg)
 
 
 ## Big O Notation
