@@ -133,7 +133,7 @@ findNeedles(main_haystack,needles)
 
 **Time Complexity:**
 
-- Time take to execute this function **0.086 seconds.**
+- Time taken to execute this function **0.086 seconds.**
 
 
 **Space Complexity**
