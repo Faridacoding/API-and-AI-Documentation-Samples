@@ -42,14 +42,14 @@ def findNeedles(haystack, needlesArr)
 
 ```
 
-- haystack : is the given character/string
+- haystack : is the given group of characters/strings array
 
 - needlesArr : is the user input character/string that should be searched in the haystack array.
 
 
 ## Limitations
 
-- <code>findNeedles()</code> can find characters only upto 5 characters in length. Characters above 5 with throw an error prompt.
+- <code>findNeedles()</code> can find only up to 5 characters in length. Characters above 5 with throw an error prompt.
 
 ```
 if len(needlesArr) > 5:        
@@ -134,7 +134,6 @@ needles='far 1'
 ## Source code
 
 ```
-#Import dependencies
 import re   
 import sys
 
