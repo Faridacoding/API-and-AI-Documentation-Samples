@@ -109,6 +109,17 @@ main_haystack= 'f a r i f i n d farida far 23'
 needles='far 1'
 ```
 
+## Execution
+
+- Function Call
+
+```
+findNeedles(main_haystack,needles)
+
+```
+
+
+
 ## Sample output
 
 <!--
