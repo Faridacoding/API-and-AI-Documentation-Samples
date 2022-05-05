@@ -36,20 +36,17 @@ import sys
 ## Source code
 
 ```
-#Import dependencies
-import re
+
+import re        #Import dependencies
 import sys
 
-#findNeedles Function
-def findNeedles(haystack, needlesArr):
+def findNeedles(haystack, needlesArr):    #findNeedles Function
 
-    # Check for character length >5
-    if len(needlesArr) > 5:
+    if len(needlesArr) > 5:        # Check for character length >5
         sys.stderr.write('Too many words!')
 
     else:
-        # Count the character and create a list for user
-        countArray = [0]*len(needlesArr)
+        countArray = [0]*len(needlesArr)    # Count the character and create a list for user
 
         # Convert
         for i in range(len(needlesArr)):
