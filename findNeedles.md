@@ -3,7 +3,7 @@
 
 ## Summary
 
-find_Needles() is a Python function used to search an user input character or string in an array of strings. This function can be used for character search use cases.
+findNeedles() is a Python function used to search an user input character or string in an array of strings. This function can be used for character search use cases.
 
 
 ## Packages and Environment
@@ -21,7 +21,7 @@ find_Needles() is a Python function used to search an user input character or st
 
 ## Pre-requisites
 
-find_Needles() has 2 dependencies.
+findNeedles() has 2 dependencies.
 
 1. Regex library (re)
 
