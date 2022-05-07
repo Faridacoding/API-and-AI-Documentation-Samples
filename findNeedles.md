@@ -49,7 +49,7 @@ def findNeedles(haystack, needlesArr)
 
 ## Limitations
 
-- <code>findNeedles()</code> can find only up to 5 characters in length. Characters above 5 with throw an error prompt.
+- <code>findNeedles()</code> can find only up to 5 characters in length. Characters above 5 will throw an error prompt.
 
 ```
 if len(needlesArr) > 5:        
@@ -59,7 +59,7 @@ if len(needlesArr) > 5:
 
 ## Convert <code>needlesArr</code> into an array
 
-- This code counts the length of <code>needlesArr</code> string and converts the user input string into an array.
+- This code counts the length of <code>needlesArr</code> string and converts the user input string into a character array.
 
 ```
 else:
@@ -69,9 +69,9 @@ else:
 
 ## Convert <code>haystack</code> to an array
 
-- This code splits and converts the entire <code>haystack</code> string into an array based on the defined regex pattern.
+- This code splits and converts the entire <code>haystack</code> string into a string array based on the defined regex pattern.
 
-- The results of the string split are stored in <code>words</code> array
+- The results of the string split into characters are stored in <code>words</code> array
 
 ```
 
@@ -138,7 +138,7 @@ findNeedles(main_haystack,needles)
 
 **Space Complexity**
 
-- TBD*
+- !! TBD - Need inputs from SME  !!
 
 
 
@@ -174,18 +174,28 @@ def findNeedles(haystack, needlesArr):
 <code>Callout from Technical Writer to Software Engineer:</code>
 
 
-1. Can the <code>countArray</code> (input string converted to character list) be modified to include string list and character list?
+1. Can the <code>countArray</code> (input string converted to character list) be modified to include character array and string array?
 
     > For Example:
     >
     >
-    > Input String <code>'far'</code> is converted to <code>['far']</code> string list and <code>['f' 'a' 'r']</code> character list. If this is out of scope, then kindly ignore this comment.
+    > Input String <code>'far'</code> is converted to both
+    >
+    >
+    > - <code>['f' 'a' 'r']</code> character list and,
+    >
+    >
+    > - <code>['far']</code> string array.
+    >
+    >
 
-2. More information on the Regex string pattern extraction is required for the code shown below.
+  If this is out of scope, then kindly ignore this comment.
+
+2. More information on string pattern extraction  using Regex is required for the code shown below.
 
     > ```re.split("[ \"\'\t\n\b\f\r]", haystack)```
 
-3. More information on **"Space Complexity"** is required. **Big O notation** for Space Complexity is needed.
+3. More information on **"Space Complexity"** is required. **Big O notation** for Space Complexity formula is needed.
 
 # [](#displayline)
 
