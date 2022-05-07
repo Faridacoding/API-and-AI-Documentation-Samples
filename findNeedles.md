@@ -174,7 +174,7 @@ def findNeedles(haystack, needlesArr):
 <code>Callout from Technical Writer to SME:</code>
 
 
-1. Can the <code>countArray</code> (input string converted to character array) be modified to include character array and string array?
+1. Can the <code>countArray</code> ("Convert <code>needlesArr</code> into an array" section) be modified to include character array and string array?
 
     > For Example:
     >
@@ -195,7 +195,7 @@ def findNeedles(haystack, needlesArr):
 
     > ```re.split("[ \"\'\t\n\b\f\r]", haystack)```
 
-3. More information on **"Space Complexity"** is required. **Big O notation** for Space Complexity formula is needed.
+3. More information on **"Space Complexity"** for future improvements is required. **Big O notation** formula for Space Complexity is needed.
 
 # [](#displayline)
 
