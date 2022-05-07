@@ -176,14 +176,14 @@ def findNeedles(haystack, needlesArr):
 
 1. Can the <code>countArray</code> (input string converted to character list) be modified to include string list and character list?
 
-  > For Example:
-  >
-  >
-  > Input String <code>'far'</code> is converted to <code>['far']</code> string list and <code>['f' 'a' 'r']</code> character list. If this is out of scope, then kindly ignore this comment.
+    > For Example:
+    >
+    >
+    > Input String <code>'far'</code> is converted to <code>['far']</code> string list and <code>['f' 'a' 'r']</code> character list. If this is out of scope, then kindly ignore this comment.
 
 2. More information on the Regex string pattern extraction is required for the code shown below.
 
-  > ```re.split("[ \"\'\t\n\b\f\r]", haystack)```
+    > ```re.split("[ \"\'\t\n\b\f\r]", haystack)```
 
 3. More information on **"Space Complexity"** is required. **Big O notation** for Space Complexity is needed.
 
