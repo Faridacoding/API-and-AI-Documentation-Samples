@@ -174,7 +174,7 @@ def findNeedles(haystack, needlesArr):
 <code>Callout from Technical Writer to SME:</code>
 
 
-1. Can the <code>countArray</code> (input string converted to character list) be modified to include character array and string array?
+1. Can the <code>countArray</code> (input string converted to character array) be modified to include character array and string array?
 
     > For Example:
     >
