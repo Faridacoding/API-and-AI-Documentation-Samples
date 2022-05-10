@@ -12,6 +12,7 @@
 #### 8. [Dependencies](#addlink)
 #### 9. [AVICAR Dataset](#addlink)
 
+
 ## Summary
 
 This API documentation provides information about pre-processing audio datasets which has a Stationary Noise in the background. The primary use case for this documentation is for a **Car Voice Assistant.** The Voice Assistant device is placed in the dashboard of a car where the driver asks for route guidance to a destination. The Voice Assistant responds with a route map and voice guidance to the destination, while displaying the map on the device. Car Voice Assistants encounter issues like background noise that occurs in the interior of car when the car is moving. This documentation provides solution to remove the background noise from the audio to improve quality of response by the Car Voice Assistant.
@@ -142,6 +143,8 @@ Audio(data=audio_files[0], autoplay=True)
 
 ```
 
+[Raw Audio](/Raw_audio_files_0.wav)
+
 # [](displayline)
 
 
@@ -167,6 +170,17 @@ ax.plot(data)
 
 ![Plot Amplitude over time](https://github.com/Faridacoding/API-Documentation-Samples/blob/195d0ec4eec173f6360c7255e092182237a80473/Machine%20Learning%20Voice%20Assistant/Voiceassistant_waveforem.jpg)
 
+#### 7. Dataset Inferences
+
+- The first audio file in the AVICAR dataset has a male voice speaking the word **"Done"** in a moving car environment.
+
+- The background noise of the moving car(humming noise) is captured along with the human voice during audio recording. This background noise is a stationary noise and it should be removed.
+
+- Duration of the first audio file = 0.9470625 seconds
+
+- The waveplot shows the distorted amplitude wave
+    - There are wavy spikes throughout the length of the audio.
+    - These wavy spikes implies background noise of the moving car.
 
 
 ## Stationary Noise Cleaning using Noisereduce API
