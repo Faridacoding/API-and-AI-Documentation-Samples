@@ -1,5 +1,17 @@
 # Stationary Noise Cleaning API documentation
 
+## Contents
+
+#### 1. [Summary](#addlink)
+#### 2. [Voice Assistant Overview](#addlink)
+#### 3. [What is Stationary Noise and Non-Stationary noise?](#addlink)
+#### 4. [Limitations](#addlink)
+#### 5. [Dataset](#addlink)
+#### 6. [Environment](#addlink)
+#### 7. [Pre-Requisites](#addlink)
+#### 8. [Dependencies](#addlink)
+#### 9. [AVICAR Dataset](#addlink)
+
 ## Summary
 
 This API documentation provides information about pre-processing audio datasets which has a Stationary Noise in the background. The primary use case for this documentation is for a **Car Voice Assistant.** The Voice Assistant device is placed in the dashboard of a car where the driver asks for route guidance to a destination. The Voice Assistant responds with a route map and voice guidance to the destination, while displaying the map on the device. Car Voice Assistants encounter issues like background noise that occurs in the interior of car when the car is moving. This documentation provides solution to remove the background noise from the audio to improve quality of response by the Car Voice Assistant.
@@ -32,7 +44,7 @@ This documentation focuses on Stationary Noise.
 
 ## Dataset
 
-  - AVICAR Dataset used is an open source datasets with audio recorded in a moving car. Dataset name : ["avicar_somedigits.zip"](http://www.isle.illinois.edu/sst/AVICAR/)
+  - AVICAR Dataset used is an open source dataset with audio recorded in a moving car. Dataset name : ["avicar_somedigits.zip"](http://www.isle.illinois.edu/sst/AVICAR/)
 
   - User speaks alphabets or words or number.
 
@@ -154,6 +166,8 @@ ax.plot(data)
 ```
 
 ![Plot Amplitude over time](https://github.com/Faridacoding/API-Documentation-Samples/blob/195d0ec4eec173f6360c7255e092182237a80473/Machine%20Learning%20Voice%20Assistant/Voiceassistant_waveforem.jpg)
+
+
 
 ## Stationary Noise Cleaning using Noisereduce API
 
