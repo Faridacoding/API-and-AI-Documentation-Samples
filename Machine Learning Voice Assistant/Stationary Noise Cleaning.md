@@ -172,6 +172,8 @@ ax.plot(data)
 
 ![Plot Amplitude over time](https://github.com/Faridacoding/API-Documentation-Samples/blob/195d0ec4eec173f6360c7255e092182237a80473/Machine%20Learning%20Voice%20Assistant/Voiceassistant_waveforem.jpg)
 
+# [](displayline)
+
 #### 7. Dataset Inferences
 
 - The first audio file in the AVICAR dataset has a male voice speaking the word **"Done"** in a moving car environment.
@@ -184,10 +186,11 @@ ax.plot(data)
     - There are wavy spikes throughout the length of the audio.
     - These wavy spikes implies background noise of the moving car.
 
+# [](displayline)
 
 ## Stationary Noise Cleaning using <code>noisereduce</code> API
 
-<code>noisereduce</code> API is based on an algorithm based on **Fourier Analysis** and **Spectral Noise Gating.** The author of this algorithm can the related Github repo can be found [here.](https://timsainburg.com/noise-reduction-python.html)
+<code>noisereduce</code> API is based on an algorithm on **Fourier Analysis** and **Spectral Noise Gating.** The author of this algorithm and the related Github repo can be found [here.](https://timsainburg.com/noise-reduction-python.html)
 
 The <code>noisereduce</code> algorithm requires two inputs:
 
@@ -195,8 +198,10 @@ The <code>noisereduce</code> algorithm requires two inputs:
 
 2. A **signal audio clip containing the signal** and the noise intended to be removed.
 
+# [](displayline)
 
-#### Step 1. Creating the signal for the Audio  
+
+#### <code>Step 1.</code> Creating the signal for the Audio  
 
 This code creates a synthetic noise signal and adds it to the original audio.
 
@@ -216,7 +221,8 @@ audio_clip_band_limited = data+noise
 
 # [](displayline)
 
-#### Plot Amplitude over Time waveform for the modified Audio
+
+#### <code> Step 2:</code> Plot Graph for Modified Audio with Synthetic signal
 
 ```
 fig, ax = plt.subplots(figsize=(15,3))
@@ -226,6 +232,47 @@ ax.plot(audio_clip_band_limited)
 ```
 
 ![Modified Audio with Synthetic signal](https://github.com/Faridacoding/API-Documentation-Samples/blob/main/Machine%20Learning%20Voice%20Assistant/Modified%20Audio%20with%20Synthetic%20signal.jpg)
+
+# [](displayline)
+
+#### <code>Step 3:</code> Removing noise
+
+- This code removes the synthetic signal that was added in Step 2.
+
+- The **frequencies** for both **synthetic signal and background audio signal overlap each other.** And, when the <code>noisereduce</code> algorithm is applied on the Audio, the background noise is removed along with the synthetic signal that was added previously.
+
+>```
+>reduced_noise = nr.reduce_noise(y = >audio_clip_band_limited,n_std_thresh_stationary=1.5,sr=rate,stationary=True)
+>
+>```
+
+# [](displayline)
+
+#### <code>Step 4:</code> Listen to the Cleaned audio
+
+>```
+>Audio(data=reduced_noise, rate=rate, autoplay=True)
+>
+>```
+
+[Cleaned Audio](https://github.com/Faridacoding/API-Documentation-Samples)
+
+# [](displayline)
+
+#### <code>Step 5:</code> Plot Graph for the Cleaned Audio
+
+>```
+>fig, ax = plt.subplots(figsize=(20,3))
+>ax.set(xlabel='Time (s)', ylabel='Sound Amplitude')
+>ax.plot(reduced_noise, color ="green")
+>
+>```
+
+![Cleaned Audio waveform](https://github.com/Faridacoding/API-Documentation-Samples/blob/main/Machine%20Learning%20Voice%20Assistant/Cleaned%20Audio%20graph.jpg)
+
+
+# [](displayline)
+
 
 
 ## References
