@@ -143,7 +143,7 @@ Audio(data=audio_files[0], autoplay=True)
 
 ```
 
-[Raw Audio](/Raw_audio_files_0.wav)
+Find the Audio here [Raw_audio_files_0.wav](https://github.com/Faridacoding/API-Documentation-Samples/tree/main/Machine%20Learning%20Voice%20Assistant)
 
 # [](displayline)
 
@@ -160,6 +160,8 @@ print(dur_avi)  # Duration is .9470635 seconds
 # [](displayline)
 
 #### 6. Plot Amplitude over Time waveform
+
+Graph is plotted using <code>matplotlib</code> library.
 
 ```
 fig, ax = plt.subplots(figsize=(15,3))
@@ -178,14 +180,52 @@ ax.plot(data)
 
 - Duration of the first audio file = 0.9470625 seconds
 
-- The waveplot shows the distorted amplitude wave
+- The spectrum graph shows distorted amplitude wave
     - There are wavy spikes throughout the length of the audio.
     - These wavy spikes implies background noise of the moving car.
 
 
-## Stationary Noise Cleaning using Noisereduce API
+## Stationary Noise Cleaning using <code>noisereduce</code> API
+
+<code>noisereduce</code> API is based on an algorithm based on **Fourier Analysis** and **Spectral Noise Gating.** The author of this algorithm can the related Github repo can be found [here.](https://timsainburg.com/noise-reduction-python.html)
+
+The <code>noisereduce</code> algorithm requires two inputs:
+
+1. A **noise audio clip containing stationary noise** of the audio clip.
+
+2. A **signal audio clip containing the signal** and the noise intended to be removed.
 
 
+#### Step 1. Creating the signal for the Audio  
+
+This code creates a synthetic noise signal and adds it to the original audio.
+
+- The length of the audio <code>noise_len</code> is **standardized to 1 sec.** This is because AVICAR dataset had different duration for each file.
+
+- The frequency of the synthetic signal <code>noise</code> is set in the range **10KHz - 20Khz**
+
+- The audio file array and the noise array are combined together <code>audio_clip_band_limited</code> with a simple mathematical matrix addition technique.
+
+```
+noise_len = 1 # seconds
+noise = band_limited_noise(min_freq=10000, max_freq = 20000, samples=len(data), samplerate=rate)*10
+noise_clip = noise[:rate*noise_len]
+audio_clip_band_limited = data+noise
+
+```
+
+# [](displayline)
+
+#### Plot Amplitude over Time waveform for the modified Audio
+
+```
+fig, ax = plt.subplots(figsize=(15,3))
+ax.set(xlabel='Time (s)', ylabel='Sound Amplitude')
+ax.plot(audio_clip_band_limited)
+
+```
+
+![Modified Audio with Synthetic signal](https://github.com/Faridacoding/API-Documentation-Samples/blob/main/Machine%20Learning%20Voice%20Assistant/Modified%20Audio%20with%20Synthetic%20signal.jpg)
 
 
 ## References
