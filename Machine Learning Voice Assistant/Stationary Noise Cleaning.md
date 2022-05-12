@@ -292,7 +292,9 @@ noise = band_limited_noise(min_freq=10000, max_freq = 20000, samples=len(data), 
 
 #### <code> Step 1:</code> Create a function <code>S_noise_reducer()</code>
 
-- This function adds a signal or synthetic noise to the audio.
+- This function adds a **signal** or **synthetic noise** to the audio.
+
+- The audio length is **not standardized.** The cleaned audio remains same as original. 
 
 >```
 >def S_noise_reducer(data,length,rate):
@@ -349,6 +351,12 @@ noise = band_limited_noise(min_freq=10000, max_freq = 20000, samples=len(data), 
 >    sf.write('Cleaned_avicar_somedigits/Cleaned_'+file_name, reduced_noise, sfreq)
 >
 >```
+
+
+## Sample output
+
+[Sample Output]()
+
 
 ## Future Work
 
