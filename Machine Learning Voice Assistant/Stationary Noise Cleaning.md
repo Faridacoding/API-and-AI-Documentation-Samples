@@ -24,11 +24,11 @@
 
 ## 1. Summary
 
-This API documentation provides information about pre-processing audio datasets which has a Stationary Noise in the background. The primary use case for this documentation is for a **Car Voice Assistant.** The Voice Assistant device is placed in the dashboard of a car where the driver asks for route guidance to a destination. The Voice Assistant responds with a route map and voice guidance to the destination, while displaying the map on the device. Car Voice Assistants encounter issues like background noise that occurs in the interior of car when the car is moving. This documentation provides solution to remove the background noise from the audio to improve quality of response by the Car Voice Assistant.
+This API documentation provides information about pre-processing audio datasets which has a Stationary Noise in the background. The primary use case for this documentation is for a **Car Voice Assistant.** The Voice Assistant device is placed on the dashboard of a car where the driver asks for route guidance to a destination. The Voice Assistant responds with a route map and voice guidance to the destination, while displaying the map on the device. Car Voice Assistants encounter issues like background noise that occurs in the interior of car when the car is moving. This documentation provides solution to remove the background noise from the audio to improve quality of response from the Car Voice Assistant.
 
 ## 2. Voice Assistant Overview
 
-Voice Assistants are devices like Google Assistant, Siri and Alexa products developed by Google, Apple and Amazon respectively. These assistants capture human voice on the utterance of wake word (eg: "Hey Google") and responds with an action on the device. Action can be either be a voice output or a screen display or both.
+Voice Assistants are devices like Google Assistant, Siri and Alexa products developed by Google, Apple and Amazon respectively. These assistants capture human voice on the utterance of wake word (eg: "Hey Google") and responds with an action on the device. Action can either be a voice output or a screen display or both.
 
 ## 3. What is Stationary Noise and Non-Stationary noise?
 
@@ -41,7 +41,7 @@ This documentation focuses on Stationary Noise.
 
 ## 4. Limitations
 
-1. The moving car does not have passengers other than the driver. The voice input is given by driver or 1 user.
+1. The moving car does not have passengers other than the driver. The voice input is given by a driver or 1 user.
 
 2. The Stationary Noise for this API covers noises from inside of the moving car
 
@@ -56,11 +56,11 @@ This documentation focuses on Stationary Noise.
 
   - AVICAR Dataset used is an open source dataset with audio recorded in a moving car. Dataset name : ["avicar_somedigits.zip"](http://www.isle.illinois.edu/sst/AVICAR/)
 
-  - User speaks alphabets or words or number.
+  - User speaks alphabets or words or numbers.
 
-  - Dataset designed to be used for training Deep Learning models.
+  - Dataset is designed to be used for training Deep Learning models.
 
-  - Maximum duration of audio is 3 seconds or less (audio length <=3 seconds)
+  - Maximum duration of audio is 9 seconds or less (audio length <=9 seconds)
 
   - Total number of audio files 10023 files
 
@@ -152,7 +152,7 @@ The following libraries should be installed
 >
 >```
 
-Find the Audio here [Raw_audio_files_0.wav](https://github.com/Faridacoding/API-Documentation-Samples/blob/main/Machine%20Learning%20Voice%20Assistant/Raw_audio_files_0.wav
+[Raw_audio_files_0.wav](https://github.com/Faridacoding/API-Documentation-Samples/blob/main/Machine%20Learning%20Voice%20Assistant/Raw_audio_files_0.wav)
 
 # [](displayline)
 
@@ -187,12 +187,12 @@ Graph is plotted using <code>matplotlib</code> library.
 
 - The first audio file in the AVICAR dataset has a male voice speaking the word **"Done"** in a moving car environment.
 
-- The background noise of the moving car(humming noise) is captured along with the human voice during audio recording. This background noise is a stationary noise and it should be removed.
+- The background noise of the moving car (humming noise) is captured along with the human voice during audio recording. This background noise is a stationary noise and it should be removed.
 
 - Duration of the first audio file = 0.9470625 seconds
 
 - The spectrum graph shows distorted amplitude wave
-    - There are wavy spikes throughout the length of the audio.
+    - Spectrum shows wavy spikes throughout the length of the audio.
     - These wavy spikes implies background noise of the moving car.
 
 # [](displayline)
@@ -280,11 +280,15 @@ This code creates a synthetic noise signal and adds it to the original audio.
 ![Cleaned Audio waveform](https://github.com/Faridacoding/API-Documentation-Samples/blob/main/Machine%20Learning%20Voice%20Assistant/Cleaned%20Audio%20graph.jpg)
 
 
+- The straight line implies silence in audio.
+- The waveform represents human voice utterring the word **"Done"**
+
+
 # [](displayline)
 
 ## 11. Removing Stationary noise for Deep Learning Model Training
 
-- Machine Learning Models require large datasets for training a model to achieve higher prediction scores(accuracy metrics) for that model. Similarly, for Deep learning models, a larger dataset with small size is required for model training to be successful and to have higher accuracy metrics. AVICAR is designed to be used for these types of use cases.
+- Machine Learning Models require large datasets for training a model to achieve higher prediction scores (accuracy metrics) for that model. Similarly, for Deep learning models, a larger dataset with small size is required for model training to be successful and to have higher accuracy metrics. AVICAR is designed to be used for these types of use cases.
 
 - In the previous section, a sample cleaning with single audio file was tested. In this section, the entire dataset will be cleaned using the steps discussed in the previous section. This cleaned dataset can be used for training Deep Learning models.
 
@@ -303,7 +307,7 @@ This code creates a synthetic noise signal and adds it to the original audio.
 
 - This function adds a **signal** or **synthetic noise** to the audio.
 
-- The audio length is **not standardized.** The cleaned audio length remains same as original audio length.
+- The audio length is **not standardized.** The cleaned audio length remains same as the original audio length.
 
 >```
 >def S_noise_reducer(data,length,rate):
