@@ -1,5 +1,6 @@
 # Stationary Noise Cleaning API documentation
 
+<!--
 ## Contents
 
 #### 1. [Summary](https://github.com/Faridacoding/API-Documentation-Samples/blob/main/Machine%20Learning%20Voice%20Assistant/Stationary%20Noise%20Cleaning.md#1-summary-1)
@@ -18,6 +19,8 @@
 #### 14. [Future Work](https://github.com/Faridacoding/API-Documentation-Samples/blob/main/Machine%20Learning%20Voice%20Assistant/Stationary%20Noise%20Cleaning.md#14-future-work-1)
 #### 15. [References](https://github.com/Faridacoding/API-Documentation-Samples/blob/main/Machine%20Learning%20Voice%20Assistant/Stationary%20Noise%20Cleaning.md#15-references-1)
 #### 16. [Source Code](https://github.com/Faridacoding/API-Documentation-Samples/blob/main/Machine%20Learning%20Voice%20Assistant/Stationary%20Noise%20Cleaning.md#16-source-code-1)
+
+-->
 
 ## 1. Summary
 
@@ -200,7 +203,7 @@ Graph is plotted using <code>matplotlib</code> library.
 
 The <code>noisereduce</code> algorithm requires two inputs:
 
-1. A **noise audio clip containing stationary noise** of the audio clip.
+1. A **noise audio clip containing stationary noise.**
 
 2. A **signal audio clip containing the signal** and the noise intended to be removed.
 
@@ -211,11 +214,11 @@ The <code>noisereduce</code> algorithm requires two inputs:
 
 This code creates a synthetic noise signal and adds it to the original audio.
 
-- The length of the audio <code>noise_len</code> is **standardized to 1 sec.** This is because AVICAR dataset had different duration for each file.
+- The length of the audio <code>noise_len</code> is **standardized to 1 sec.**
 
 - The frequency of the synthetic signal <code>noise</code> is set in the range **10KHz - 20Khz**
 
-- The audio file array and the noise array are combined together <code>audio_clip_band_limited</code> with a simple mathematical matrix addition technique.
+- The audio file array and the noise array are combined together and stored in variable <code>audio_clip_band_limited.</code> This is a simple mathematical matrix addition technique.
 
 >```
 >noise_len = 1 # seconds
