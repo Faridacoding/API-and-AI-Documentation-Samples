@@ -2,22 +2,22 @@
 
 ## Contents
 
-#### 1. [Summary](#addlink)
-#### 2. [Voice Assistant Overview](#addlink)
-#### 3. [What is Stationary Noise and Non-Stationary noise?](#addlink)
-#### 4. [Limitations](#addlink)
-#### 5. [Dataset](#addlink)
-#### 6. [Environment](#addlink)
-#### 7. [Pre-Requisites](#addlink)
-#### 8. [Dependencies](#addlink)
-#### 9. [Clean a sample Audio file](#addlink)
-#### 10. [Stationary Noise Cleaning using <code>noisereduce</code> API](#addlink)
-#### 11. [Removing Stationary noise for Deep Learning Model Training](#addlink)
-#### 12. [Steps for cleaning the AVICAR dataset](#addlink)
-#### 13. [Sample Output](#addlink)
-#### 14. [Future Work](#addlink)
-#### 15. [References](#addlink)
-#### 16. [Source Code](#addlink)
+#### 1. [Summary](https://github.com/Faridacoding/API-Documentation-Samples/blob/main/Machine%20Learning%20Voice%20Assistant/Stationary%20Noise%20Cleaning.md#1-summary-1)
+#### 2. [Voice Assistant Overview](https://github.com/Faridacoding/API-Documentation-Samples/blob/main/Machine%20Learning%20Voice%20Assistant/Stationary%20Noise%20Cleaning.md#2-voice-assistant-overview-1)
+#### 3. [What is Stationary Noise and Non-Stationary noise?](https://github.com/Faridacoding/API-Documentation-Samples/blob/main/Machine%20Learning%20Voice%20Assistant/Stationary%20Noise%20Cleaning.md#3-what-is-stationary-noise-and-non-stationary-noise-1)
+#### 4. [Limitations](https://github.com/Faridacoding/API-Documentation-Samples/blob/main/Machine%20Learning%20Voice%20Assistant/Stationary%20Noise%20Cleaning.md#4-limitations-1)
+#### 5. [Dataset](https://github.com/Faridacoding/API-Documentation-Samples/blob/main/Machine%20Learning%20Voice%20Assistant/Stationary%20Noise%20Cleaning.md#5-dataset-1)
+#### 6. [Environment](https://github.com/Faridacoding/API-Documentation-Samples/blob/main/Machine%20Learning%20Voice%20Assistant/Stationary%20Noise%20Cleaning.md#6-environment-1)
+#### 7. [Pre-Requisites](https://github.com/Faridacoding/API-Documentation-Samples/blob/main/Machine%20Learning%20Voice%20Assistant/Stationary%20Noise%20Cleaning.md#7-pre-requisites-1)
+#### 8. [Dependencies](https://github.com/Faridacoding/API-Documentation-Samples/blob/main/Machine%20Learning%20Voice%20Assistant/Stationary%20Noise%20Cleaning.md#8-dependencies-1)
+#### 9. [Clean a sample Audio file](https://github.com/Faridacoding/API-Documentation-Samples/blob/main/Machine%20Learning%20Voice%20Assistant/Stationary%20Noise%20Cleaning.md#9-clean-a-sample-audio-file-1)
+#### 10. [Stationary Noise Cleaning using <code>noisereduce</code> API](https://github.com/Faridacoding/API-Documentation-Samples/blob/main/Machine%20Learning%20Voice%20Assistant/Stationary%20Noise%20Cleaning.md#10-stationary-noise-cleaning-using-noisereduce-api-1)
+#### 11. [Removing Stationary noise for Deep Learning Model Training](https://github.com/Faridacoding/API-Documentation-Samples/blob/main/Machine%20Learning%20Voice%20Assistant/Stationary%20Noise%20Cleaning.md#11-removing-stationary-noise-for-deep-learning-model-training-1)
+#### 12. [Steps for cleaning the AVICAR dataset](https://github.com/Faridacoding/API-Documentation-Samples/blob/main/Machine%20Learning%20Voice%20Assistant/Stationary%20Noise%20Cleaning.md#12-steps-for-cleaning-the-avicar-dataset-1)
+#### 13. [Sample Output](https://github.com/Faridacoding/API-Documentation-Samples/blob/main/Machine%20Learning%20Voice%20Assistant/Stationary%20Noise%20Cleaning.md#13-sample-output-1)
+#### 14. [Future Work](https://github.com/Faridacoding/API-Documentation-Samples/blob/main/Machine%20Learning%20Voice%20Assistant/Stationary%20Noise%20Cleaning.md#14-future-work-1)
+#### 15. [References](https://github.com/Faridacoding/API-Documentation-Samples/blob/main/Machine%20Learning%20Voice%20Assistant/Stationary%20Noise%20Cleaning.md#15-references-1)
+#### 16. [Source Code](https://github.com/Faridacoding/API-Documentation-Samples/blob/main/Machine%20Learning%20Voice%20Assistant/Stationary%20Noise%20Cleaning.md#16-source-code-1)
 
 ## 1. Summary
 
