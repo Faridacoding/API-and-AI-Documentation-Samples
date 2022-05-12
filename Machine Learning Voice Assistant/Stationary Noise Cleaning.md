@@ -10,18 +10,24 @@
 #### 6. [Environment](#addlink)
 #### 7. [Pre-Requisites](#addlink)
 #### 8. [Dependencies](#addlink)
-#### 9. [AVICAR Dataset](#addlink)
+#### 9. [Clean a sample Audio file](#addlink)
+#### 10. [Stationary Noise Cleaning using <code>noisereduce</code> API](#addlink)
+#### 11. [Removing Stationary noise for Deep Learning Model Training](#addlink)
+#### 12. [Steps for cleaning the AVICAR dataset](#addlink)
+#### 13. [Sample Output](#addlink)
+#### 14. [Future Work](#addlink)
+#### 15. [References](#addlink)
+#### 16. [Source Code](#addlink)
 
-
-## Summary
+## 1. Summary
 
 This API documentation provides information about pre-processing audio datasets which has a Stationary Noise in the background. The primary use case for this documentation is for a **Car Voice Assistant.** The Voice Assistant device is placed in the dashboard of a car where the driver asks for route guidance to a destination. The Voice Assistant responds with a route map and voice guidance to the destination, while displaying the map on the device. Car Voice Assistants encounter issues like background noise that occurs in the interior of car when the car is moving. This documentation provides solution to remove the background noise from the audio to improve quality of response by the Car Voice Assistant.
 
-## Voice Assistant Overview
+## 2. Voice Assistant Overview
 
 Voice Assistants are devices like Google Assistant, Siri and Alexa products developed by Google, Apple and Amazon respectively. These assistants capture human voice on the utterance of wake word (eg: "Hey Google") and responds with an action on the device. Action can be either be a voice output or a screen display or both.
 
-## What is Stationary Noise and Non-Stationary noise?
+## 3. What is Stationary Noise and Non-Stationary noise?
 
 Stationary noise is a steady stream of noise that is constant and occurs in the background at a constant frequency, throughout the length of the audio. Example: A moving car interior has a low pitch humming noise throughout the entire travel time in the car.
 
@@ -30,7 +36,7 @@ Non-Stationary noises are variable noises with different frequencies and pitch t
 This documentation focuses on Stationary Noise.
 
 
-## Limitations
+## 4. Limitations
 
 1. The moving car does not have passengers other than the driver. The voice input is given by driver or 1 user.
 
@@ -43,7 +49,7 @@ This documentation focuses on Stationary Noise.
   Both the noises have a difference in pitch but have a constant frequency throughout the entire audio.
 
 
-## Dataset
+## 5. Dataset
 
   - AVICAR Dataset used is an open source dataset with audio recorded in a moving car. Dataset name : ["avicar_somedigits.zip"](http://www.isle.illinois.edu/sst/AVICAR/)
 
@@ -56,12 +62,12 @@ This documentation focuses on Stationary Noise.
   - Total number of audio files 10023 files
 
 
-## Environment
+## 6. Environment
 
   - Jupyter Notebook version 6.4.5
 
 
-## Pre-Requisites
+## 7. Pre-Requisites
 
 The following libraries should be installed
 
@@ -72,7 +78,7 @@ The following libraries should be installed
 >
 >```
 
-## Dependencies
+## 8. Dependencies
 
 ##### Import Libraries
 
@@ -94,10 +100,10 @@ The following libraries should be installed
 >
 >```
 
-## Clean a sample Audio file
+## 9. Clean a sample Audio file
 
 
-#### 1. Set directory path for loading AVICAR audio files
+#### <code>Step 1.</code> Set directory path for loading AVICAR audio files
 
 >```
 >data_dir='/Downloads/avicar_somedigits'
@@ -111,7 +117,7 @@ The following libraries should be installed
 
 # [](#displayline)
 
-#### 2. Load 1 Audio file
+#### <code>Step 2.</code> Load 1 Audio file
 
 
 >```
@@ -126,7 +132,7 @@ The following libraries should be installed
 
 # [](displayline)
 
-#### 3. Find Sampling rate
+#### <code>Step 3.</code> Find Sampling rate
 
 >```
 >print(rate) # sampling rate is 16Khz
@@ -136,7 +142,7 @@ The following libraries should be installed
 # [](displayline)
 
 
-#### 4. Listen to the Audio
+#### <code> Step 4.</code> Listen to the Audio
 
 >```
 >Audio(data=audio_files[0], autoplay=True)
@@ -148,7 +154,7 @@ Find the Audio here [Raw_audio_files_0.wav](https://github.com/Faridacoding/API-
 # [](displayline)
 
 
-#### 5. Find duration of the Audio
+#### <code>Step 5.</code> Find duration of the Audio
 
 >```
 >file_name=audio_files[0]
@@ -159,7 +165,7 @@ Find the Audio here [Raw_audio_files_0.wav](https://github.com/Faridacoding/API-
 
 # [](displayline)
 
-#### 6. Plot Amplitude over Time waveform
+#### <code> Step 6.</code> Plot Amplitude over Time waveform
 
 Graph is plotted using <code>matplotlib</code> library.
 
@@ -174,7 +180,7 @@ Graph is plotted using <code>matplotlib</code> library.
 
 # [](displayline)
 
-#### 7. Dataset Inferences
+#### <code> Step 7.</code> Dataset Inferences
 
 - The first audio file in the AVICAR dataset has a male voice speaking the word **"Done"** in a moving car environment.
 
@@ -188,7 +194,7 @@ Graph is plotted using <code>matplotlib</code> library.
 
 # [](displayline)
 
-## Stationary Noise Cleaning using <code>noisereduce</code> API
+## 10. Stationary Noise Cleaning using <code>noisereduce</code> API
 
 <code>noisereduce</code> API is based on an algorithm on **Fourier Analysis** and **Spectral Noise Gating.** The author of this algorithm and the related Github repo can be found [here.](https://timsainburg.com/noise-reduction-python.html)
 
@@ -273,13 +279,13 @@ This code creates a synthetic noise signal and adds it to the original audio.
 
 # [](displayline)
 
-## Removing Stationary noise for Deep Learning Model Training
+## 11. Removing Stationary noise for Deep Learning Model Training
 
 - Machine Learning Models require large datasets for training a model to achieve higher prediction scores(accuracy metrics) for that model. Similarly, for Deep learning models, a larger dataset with small size is required for model training to be successful and to have higher accuracy metrics. AVICAR is designed to be used for these types of use cases.
 
 - In the previous section, a sample cleaning with single audio file was tested. In this section, the entire dataset will be cleaned using the steps discussed in the previous section. This cleaned dataset can be used for training Deep Learning models.
 
-## Steps for cleaning the AVICAR dataset
+## 12. Steps for cleaning the AVICAR dataset
 
 >> 1. Create a function for the adding synthetic noise to the audio <code>S_noise_reducer(data,length,rate)</code>
 >>
@@ -353,18 +359,18 @@ This code creates a synthetic noise signal and adds it to the original audio.
 >```
 
 
-## Sample output
+## 13. Sample output
 
 ![Sample Output](https://github.com/Faridacoding/API-Documentation-Samples/blob/main/Machine%20Learning%20Voice%20Assistant/Sample%20Original%20and%20Cleaned%20Audio%20file.png)
 
 
-## Future Work
+## 14. Future Work
 
 - This algorithm can be improvised using Speech-to-text API (Google's API) to convert the clean audio file to text.
 
 - This text can then be fed into the Voice Assistant for response generation.
 
-## References
+## 15. References
 
 1. **AVICAR Dataset**
      - AVICAR Dataset - Stationary noise dataset (car driving noise + driver/passenger noise)
@@ -375,4 +381,6 @@ This code creates a synthetic noise signal and adds it to the original audio.
      - Link : https://timsainburg.com/noise-reduction-python.html
 
 
-## Source Code
+## 16. Source Code
+
+[Voice Assistant Stationary Noise Cleaning](https://github.com/Faridacoding/Hashnode/blob/main/Voice%20Assistant%20Stationary%20Noise%20Cleaning%20final.ipynb)
