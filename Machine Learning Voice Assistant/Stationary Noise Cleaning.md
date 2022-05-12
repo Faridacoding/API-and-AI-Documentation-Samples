@@ -294,7 +294,7 @@ noise = band_limited_noise(min_freq=10000, max_freq = 20000, samples=len(data), 
 
 - This function adds a **signal** or **synthetic noise** to the audio.
 
-- The audio length is **not standardized.** The cleaned audio remains same as original. 
+- The audio length is **not standardized.** The cleaned audio remains same as original.
 
 >```
 >def S_noise_reducer(data,length,rate):
@@ -355,7 +355,7 @@ noise = band_limited_noise(min_freq=10000, max_freq = 20000, samples=len(data), 
 
 ## Sample output
 
-[Sample Output]()
+[Sample Output](https://github.com/Faridacoding/API-Documentation-Samples/blob/main/Machine%20Learning%20Voice%20Assistant/Sample%20Original%20and%20Cleaned%20Audio%20file.png)
 
 
 ## Future Work
