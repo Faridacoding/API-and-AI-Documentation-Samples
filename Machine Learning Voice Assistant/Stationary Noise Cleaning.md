@@ -65,46 +65,46 @@ This documentation focuses on Stationary Noise.
 
 The following libraries should be installed
 
-```
-!pip install librosa   # python package for analysis of audio files
-!pip install noisereduce # python package for cleaning audio background
-!pip install soundfile # python package to read and write audio files
-
-```
+> ```
+> !pip install librosa   # python package for analysis of audio files
+> !pip install noisereduce # python package for cleaning audio background
+> !pip install soundfile # python package to read and write audio files
+>
+>```
 
 ## Dependencies
 
 ##### Import Libraries
 
-```
-import numpy as np
-import pandas as pd
-import matplotlib.pyplot as plt
-from glob import glob
-from IPython.display import Audio
-import librosa as lr
-import librosa.display
-import os
-import io
-import sys
-from scipy.io import wavfile
-import noisereduce as nr
-import soundfile as sf
-from noisereduce.generate_noise import band_limited_noise
+>```
+>import numpy as np
+>import pandas as pd
+>import matplotlib.pyplot as plt
+>from glob import glob
+>from IPython.display import Audio
+>import librosa as lr
+>import librosa.display
+>import os
+>import io
+>import sys
+>from scipy.io import wavfile
+>import noisereduce as nr
+>import soundfile as sf
+>from noisereduce.generate_noise import band_limited_noise
+>
+>```
 
-```
-
-## AVICAR Dataset
+## Clean a sample Audio file
 
 
 #### 1. Set directory path for loading AVICAR audio files
 
-```
-data_dir='/Downloads/avicar_somedigits'
-audio_files=glob(data_dir + '/*.wav')
-len(audio_files)
-
-```
+>```
+>data_dir='/Downloads/avicar_somedigits'
+>audio_files=glob(data_dir + '/*.wav')
+>len(audio_files)
+>
+>```
 
 <code>Note:</code> This dataset is loaded from local machine. Substitute the <code>data_dir</code> with your local path.
 
@@ -114,11 +114,11 @@ len(audio_files)
 #### 2. Load 1 Audio file
 
 
-```
-data, rate = sf.read(audio_files[0])  # read the first audio file
-np.shape(data)  # Array size is 15153
-
-```
+>```
+>data, rate = sf.read(audio_files[0])  # read the first audio file
+>np.shape(data)  # Array size is 15153
+>
+>```
 
 - <code> data </code> audio file is converted into an array
 
@@ -128,34 +128,34 @@ np.shape(data)  # Array size is 15153
 
 #### 3. Find Sampling rate
 
-```
-print(rate) # sampling rate is 16Khz
-
-```
+>```
+>print(rate) # sampling rate is 16Khz
+>
+>```
 
 # [](displayline)
 
 
 #### 4. Listen to the Audio
 
-```
-Audio(data=audio_files[0], autoplay=True)
+>```
+>Audio(data=audio_files[0], autoplay=True)
+>
+>```
 
-```
-
-Find the Audio here [Raw_audio_files_0.wav](https://github.com/Faridacoding/API-Documentation-Samples/tree/main/Machine%20Learning%20Voice%20Assistant)
+Find the Audio here [Raw_audio_files_0.wav](https://github.com/Faridacoding/API-Documentation-Samples/blob/main/Machine%20Learning%20Voice%20Assistant/Raw_audio_files_0.wav
 
 # [](displayline)
 
 
 #### 5. Find duration of the Audio
 
-```
-file_name=audio_files[0]
-dur_avi=lr.get_duration(y=data, sr=rate)
-print(dur_avi)  # Duration is .9470635 seconds
-
-```
+>```
+>file_name=audio_files[0]
+>dur_avi=lr.get_duration(y=data, sr=rate)
+>print(dur_avi)  # Duration is .9470635 seconds
+>
+>```
 
 # [](displayline)
 
@@ -163,12 +163,12 @@ print(dur_avi)  # Duration is .9470635 seconds
 
 Graph is plotted using <code>matplotlib</code> library.
 
-```
-fig, ax = plt.subplots(figsize=(15,3))
-ax.set(xlabel='Time (s)', ylabel='Sound Amplitude')
-ax.plot(data)
-
-```
+>```
+>fig, ax = plt.subplots(figsize=(15,3))
+>ax.set(xlabel='Time (s)', ylabel='Sound Amplitude')
+>ax.plot(data)
+>
+>```
 
 ![Plot Amplitude over time](https://github.com/Faridacoding/API-Documentation-Samples/blob/195d0ec4eec173f6360c7255e092182237a80473/Machine%20Learning%20Voice%20Assistant/Voiceassistant_waveforem.jpg)
 
@@ -211,25 +211,25 @@ This code creates a synthetic noise signal and adds it to the original audio.
 
 - The audio file array and the noise array are combined together <code>audio_clip_band_limited</code> with a simple mathematical matrix addition technique.
 
-```
-noise_len = 1 # seconds
+>```
+>noise_len = 1 # seconds
 noise = band_limited_noise(min_freq=10000, max_freq = 20000, samples=len(data), samplerate=rate)*10
-noise_clip = noise[:rate*noise_len]
-audio_clip_band_limited = data+noise
-
-```
+>noise_clip = noise[:rate*noise_len]
+>audio_clip_band_limited = data+noise
+>
+>```
 
 # [](displayline)
 
 
 #### <code> Step 2:</code> Plot Graph for Modified Audio with Synthetic signal
 
-```
-fig, ax = plt.subplots(figsize=(15,3))
-ax.set(xlabel='Time (s)', ylabel='Sound Amplitude')
-ax.plot(audio_clip_band_limited)
-
-```
+>```
+>fig, ax = plt.subplots(figsize=(15,3))
+>ax.set(xlabel='Time (s)', ylabel='Sound Amplitude')
+>ax.plot(audio_clip_band_limited)
+>
+>```
 
 ![Modified Audio with Synthetic signal](https://github.com/Faridacoding/API-Documentation-Samples/blob/main/Machine%20Learning%20Voice%20Assistant/Modified%20Audio%20with%20Synthetic%20signal.jpg)
 
@@ -255,7 +255,7 @@ ax.plot(audio_clip_band_limited)
 >
 >```
 
-[Cleaned Audio](https://github.com/Faridacoding/API-Documentation-Samples)
+[Cleaned Audio](https://github.com/Faridacoding/API-Documentation-Samples/blob/main/Machine%20Learning%20Voice%20Assistant/Cleaned_AF1_35D_D0_C1_M3.wav)
 
 # [](displayline)
 
@@ -273,6 +273,98 @@ ax.plot(audio_clip_band_limited)
 
 # [](displayline)
 
+## Removing Stationary noise for Deep Learning Model Training
 
+- Machine Learning Models require large datasets for training a model to achieve higher prediction scores(accuracy metrics) for that model. Similarly, for Deep learning models, a larger dataset with small size is required for model training to be successful and to have higher accuracy metrics. AVICAR is designed to be used for these types of use cases.
+
+- In the previous section, a sample cleaning with single audio file was tested. In this section, the entire dataset will be cleaned using the steps discussed in the previous section. This cleaned dataset can be used for training Deep Learning models.
+
+## Steps for cleaning the AVICAR dataset
+
+>> 1. Create a function for the adding synthetic noise to the audio <code>S_noise_reducer(data,length,rate)</code>
+>>
+>>
+>> 2. Iterate the dataset inside a loop and clean each audio.
+
+
+# [](displayline)
+
+
+#### <code> Step 1:</code> Create a function <code>S_noise_reducer()</code>
+
+- This function adds a signal or synthetic noise to the audio.
+
+>```
+>def S_noise_reducer(data,length,rate):
+>
+>    noise_len = int(length) # seconds
+>    noise = band_limited_noise(min_freq=10000, max_freq = 20000, samples=len(data), samplerate=rate)*10
+>    noise_clip = noise[:rate*noise_len]
+>    audio_clip_band_limited = data+noise
+>
+>    return(audio_clip_band_limited)
+>```
+
+# [](displayline)
+
+#### <code> Step 2:</code> Iterate dataset inside a loop
+
+>```
+>audio_dur=[]
+>for file in range(0, len(audio_files),1):
+>    file_name=os.path.basename(audio_files[file])
+>    print(file,file_name)
+>    
+>    #Read the first audio file
+>    audio, sfreq=lr.load(audio_files[file])
+>    time=np.arange(0,len(audio))/sfreq
+>    
+>    #find the audio duration
+>    duration_avi=lr.get_duration(y=audio, sr=sfreq)
+>    #print('Audio Duration or length:',duration_avi)
+>    audio_dur.append(duration_avi)
+>    
+>    #Plot audio over time( Orginal Audio)
+>    print('Original_',file_name)
+>    fig, ax=plt.subplots(figsize=(20,3))
+>    ax.plot(time,audio)
+>    ax.set(xlabel='Time(s)',ylabel='Sound Amplitude')
+>    plt.show()
+>    
+>    
+>    #Stationary noise removal
+>    #Step1: Add noise
+>    audio_clip_band_limited=S_noise_reducer(audio,duration_avi,sfreq)
+>    reduced_noise = nr.reduce_noise(y = audio_clip_band_limited,n_std_thresh_stationary=1.5,sr=rate,stationary=True)
+>    
+>    #Plot Cleaned waveform
+>    print('Cleaned_',file_name)
+>    fig, ax=plt.subplots(figsize=(20,3))
+>    ax.plot(time,reduced_noise,color="green")
+>    plt.show()
+>    
+>    print('*****************************************************************************')
+>    
+>    #Save the Cleaned file
+>    sf.write('Cleaned_avicar_somedigits/Cleaned_'+file_name, reduced_noise, sfreq)
+>
+>```
+
+## Future Work
+
+- This algorithm can be improvised using Speech-to-text API (Google's API) to convert the clean audio file to text.
+
+- This text can then be fed into the Voice Assistant for response generation.
 
 ## References
+
+1. **AVICAR Dataset**
+     - AVICAR Dataset - Stationary noise dataset (car driving noise + driver/passenger noise)
+     - Link : http://www.isle.illinois.edu/sst/AVICAR/
+
+
+2. **Noisereduce API**
+     - Link : https://timsainburg.com/noise-reduction-python.html
+
+
+## Source Code
