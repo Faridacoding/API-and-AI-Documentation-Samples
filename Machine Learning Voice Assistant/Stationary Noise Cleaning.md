@@ -213,7 +213,7 @@ This code creates a synthetic noise signal and adds it to the original audio.
 
 >```
 >noise_len = 1 # seconds
-noise = band_limited_noise(min_freq=10000, max_freq = 20000, samples=len(data), samplerate=rate)*10
+>noise = band_limited_noise(min_freq=10000, max_freq = 20000, >samples=len(data), samplerate=rate)*10
 >noise_clip = noise[:rate*noise_len]
 >audio_clip_band_limited = data+noise
 >
@@ -294,7 +294,7 @@ noise = band_limited_noise(min_freq=10000, max_freq = 20000, samples=len(data), 
 
 - This function adds a **signal** or **synthetic noise** to the audio.
 
-- The audio length is **not standardized.** The cleaned audio remains same as original.
+- The audio length is **not standardized.** The cleaned audio length remains same as original audio length.
 
 >```
 >def S_noise_reducer(data,length,rate):
@@ -355,7 +355,7 @@ noise = band_limited_noise(min_freq=10000, max_freq = 20000, samples=len(data), 
 
 ## Sample output
 
-[Sample Output](https://github.com/Faridacoding/API-Documentation-Samples/blob/main/Machine%20Learning%20Voice%20Assistant/Sample%20Original%20and%20Cleaned%20Audio%20file.png)
+![Sample Output](https://github.com/Faridacoding/API-Documentation-Samples/blob/main/Machine%20Learning%20Voice%20Assistant/Sample%20Original%20and%20Cleaned%20Audio%20file.png)
 
 
 ## Future Work
