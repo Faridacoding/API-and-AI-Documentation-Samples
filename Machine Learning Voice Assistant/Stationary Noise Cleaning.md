@@ -281,7 +281,8 @@ This code creates a synthetic noise signal and adds it to the original audio.
 
 
 - The straight line implies silence in audio.
-- The waveform represents human voice utterring the word **"Done"**
+- The waveform is a clean audio without the background noise which represents the male voice uttering the word **"Done"**
+
 
 
 # [](displayline)
