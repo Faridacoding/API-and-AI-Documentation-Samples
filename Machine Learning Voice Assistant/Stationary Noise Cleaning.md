@@ -1,4 +1,4 @@
-# Stationary Noise Cleaning API documentation for Audio Datasets 
+# Stationary Noise Cleaning API documentation for Audio Datasets
 
 <!--
 ## Contents
@@ -40,9 +40,9 @@ Voice Assistants are devices like Google Assistant, Siri and Alexa products deve
 
 **Stationary noise** is a **steady stream of noise that is constant** and occurs in the background at a **constant frequency,** throughout the length of the audio. <!--Example: A moving car interior has a low pitch humming noise throughout the entire travel time in the car.-->
 
-Example: The sound of a lost signal on a TV channel get recorded in the background when the user is speaking.
+Example: The sound of a lost signal on a TV channel gets recorded in the background when the user is speaking.
 
-Non-Stationary noises are **variable noises with different frequencies and pitch** that occurs in the background of the whole audio.
+Non-Stationary noises are **variable noises with different frequencies and pitch** that occur in the background of the whole audio.
 
 Example : Music playing inside the car, other human voices talking in the background in a party, baby crying in the background and the likes of it.
 
