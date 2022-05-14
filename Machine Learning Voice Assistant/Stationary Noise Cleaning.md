@@ -24,7 +24,7 @@
 
 ## 1. Summary
 
-This API documentation provides information about pre-processing audio datasets which has a Stationary Noise in the background. The primary use case for this documentation is for cleaning large audio datasets for training on Deep Learning Machine learning models.
+This API documentation provides information about pre-processing audio datasets which has a Stationary Noise in the background. The primary use case is for cleaning large audio datasets. These cleaned audio dataset can be used for training on Deep Learning Machine Learning models.
 
 <!-- **Car Voice Assistant.** The Voice Assistant device is placed on the dashboard of a car where the driver asks for route guidance to a destination. The Voice Assistant responds with a route map and voice guidance to the destination, while displaying the map on the device.
 
@@ -38,7 +38,7 @@ Voice Assistants are devices like Google Assistant, Siri and Alexa products deve
 
 ## 2. What is Stationary Noise and Non-Stationary noise?
 
-Stationary noise is a steady stream of noise that is constant and occurs in the background at a constant frequency, throughout the length of the audio. <!--Example: A moving car interior has a low pitch humming noise throughout the entire travel time in the car.-->
+**Stationary noise** is a **steady stream of noise that is constant** and occurs in the background at a **constant frequency,** throughout the length of the audio. <!--Example: A moving car interior has a low pitch humming noise throughout the entire travel time in the car.-->
 
 Example: The sound of a lost signal on a TV channel get recorded in the background when the user is speaking.
 
@@ -211,14 +211,14 @@ Graph is plotted using <code>matplotlib</code> library.
 
 The <code>noisereduce</code> algorithm requires two inputs:
 
-1. A **noise audio clip containing stationary noise.**
+1. A **noise audio clip containing Stationary Noise.**
 
 2. A **signal audio clip containing the signal** and the noise intended to be removed.
 
 # [](displayline)
 
 
-#### <code>Step 1.</code> Creating the signal for the Audio  
+#### <code>Step 1.</code> Creating the synthetic noise signal for the Audio  
 
 This code creates a synthetic noise signal and adds it to the original audio.
 
@@ -230,7 +230,7 @@ This code creates a synthetic noise signal and adds it to the original audio.
 
 >```
 >noise_len = 1 # seconds
->noise = band_limited_noise(min_freq=10000, max_freq = 20000, >samples=len(data), samplerate=rate)*10
+>noise = band_limited_noise(min_freq=10000, max_freq = 20000, samples=len(data), samplerate=rate)*10
 >noise_clip = noise[:rate*noise_len]
 >audio_clip_band_limited = data+noise
 >
@@ -259,7 +259,7 @@ This code creates a synthetic noise signal and adds it to the original audio.
 - The **frequencies** for both **synthetic signal and background audio signal overlap each other.** And, when the <code>noisereduce</code> algorithm is applied on the Audio, the background noise is removed along with the synthetic signal that was added previously.
 
 >```
->reduced_noise = nr.reduce_noise(y = >audio_clip_band_limited,n_std_thresh_stationary=1.5,sr=rate,stationary=True)
+>reduced_noise = nr.reduce_noise(y = audio_clip_band_limited,n_std_thresh_stationary=1.5,sr=rate,stationary=True)
 >
 >```
 
