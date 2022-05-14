@@ -42,7 +42,7 @@ Voice Assistants are devices like Google Assistant, Siri and Alexa products deve
 
 Example: The sound of a lost signal on a TV channel get recorded in the background when the user is speaking.
 
-Non-Stationary noises are variable noises with different frequencies and pitch that occurs in the background of the whole audio.
+Non-Stationary noises are **variable noises with different frequencies and pitch** that occurs in the background of the whole audio.
 
 Example : Music playing inside the car, other human voices talking in the background in a party, baby crying in the background and the likes of it.
 
