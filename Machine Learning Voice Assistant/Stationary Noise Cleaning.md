@@ -390,6 +390,8 @@ This code creates a synthetic noise signal and adds it to the original audio.
 2. **Noisereduce API**
      - Link : https://timsainburg.com/noise-reduction-python.html
 
+     - Github repo: https://github.com/timsainb/noisereduce
+
 
 ## 16. Source Code
 
