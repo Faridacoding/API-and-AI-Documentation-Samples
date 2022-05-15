@@ -44,7 +44,7 @@ Example: The sound of a lost signal on a TV channel gets recorded in the backgro
 
 Non-Stationary noises are **variable noises with different frequencies and pitch** that occur in the background of the whole audio.
 
-Example : Music playing inside the car, other human voices talking in the background in a party, baby crying in the background and the likes of it.
+Example : Music playing inside the car, other human voices talking in the background at a party, a baby crying in the background and the likes of it.
 
 This documentation focuses on Stationary Noise.
 
@@ -123,7 +123,7 @@ The following libraries should be installed
 >
 >```
 
-<code>Note:</code> This dataset is loaded from local machine. Substitute the <code>data_dir</code> with your local path.
+<code>Note:</code> This dataset is loaded from a local machine. Substitute the <code>data_dir</code> with your local path.
 
 
 # [](#displayline)
@@ -201,7 +201,7 @@ Graph is plotted using <code>matplotlib</code> library.
 
 - The spectrum graph shows distorted amplitude wave
     - Spectrum shows wavy spikes throughout the length of the audio.
-    - These wavy spikes implies background noise of the moving car.
+    - These wavy spikes imply background noise of the moving car.
 
 # [](displayline)
 
@@ -299,7 +299,7 @@ This code creates a synthetic noise signal and adds it to the original audio.
 
 - Machine Learning Models require large datasets for training a model to achieve higher prediction scores (accuracy metrics) for that model. Similarly, for Deep learning models, a larger dataset with small size is required for model training to be successful and to have higher accuracy metrics. AVICAR is designed to be used for these types of use cases.
 
-- In the previous section, a sample cleaning with single audio file was tested. In this section, the entire dataset will be cleaned using the steps discussed in the previous section. This cleaned dataset can be used for training Deep Learning models.
+- In the previous section, a sample cleaning with a single audio file was tested. In this section, the entire dataset will be cleaned using the steps discussed in the previous section. This cleaned dataset can be used for training Deep Learning models.
 
 ## 10. Steps for cleaning the AVICAR dataset
 
@@ -316,7 +316,7 @@ This code creates a synthetic noise signal and adds it to the original audio.
 
 - This function adds a **signal** or **synthetic noise** to the audio.
 
-- The audio length is **not standardized.** The cleaned audio length remains same as the original audio length.
+- The audio length is **not standardized.** The cleaned audio length remains the same as the original audio length.
 
 >```
 >def S_noise_reducer(data,length,rate):
