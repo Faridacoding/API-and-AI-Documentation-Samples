@@ -81,7 +81,7 @@ for i in range(len(needlesArr)):
 
 ## Search for <code>needlesArr</code> words in <code>haystack</code> array
 
-- This code checks if the the user input string <code>needlesArr</code> is present in the <code>words</code> array.
+- This code checks if the user input string <code>needlesArr</code> is present in the <code>words</code> array.
 
 - If the string is found the counter is incremented by 1.
 
@@ -133,7 +133,7 @@ findNeedles(main_haystack,needles)
 
 **Time Complexity:**
 
-- Time taken to execute this function **0.086 seconds.**
+- Time taken to execute this function is **0.086 seconds.**
 
 
 **Space Complexity**
@@ -199,4 +199,4 @@ def findNeedles(haystack, needlesArr):
 
 # [](#displayline)
 
-This draft documentation is ready to be reviewed. Content will updated and published after more information is received.
+This draft documentation is ready to be reviewed. Content will be updated and published after more information is received.
