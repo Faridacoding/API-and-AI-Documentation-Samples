@@ -26,5 +26,17 @@ This is a sample API documentation for a Gen AI product &mdash;Kadinsky 2.2&mdas
 
 - Kandinsky-2.2 AI image generator API reference documentation.pdf
 
+### 5. Blog writing for a Deep Learning ML model
+
+This is a blog article for a Deep Learning model to increase the resolution of drone captured images with Super-Resolution methods of Bi-cubic and Bi-linear interpolation.
+
+- [Enhancing Drone Imagery with Super-Resolution Using Deep Learning](https://omdena.com/blog/enhancing-drone-imagery-with-super-resolution-using-deep-learning)
+
+
+
+
+
+
+
 
 
