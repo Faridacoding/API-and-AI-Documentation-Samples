@@ -12,19 +12,19 @@ This is sample documentation for "Finding a Needle in a Haystack" algorithm writ
 
 This API documentation is for a web-based product — SoundCloud — an audio streaming service.
 
-- SoundCloud API.pdf
+- [SoundCloud API.pdf](https://github.com/Faridacoding/API-and-AI-Documentation-Samples/blob/main/SoundCloud%20API.pdf)
 
 ### 3. Audio restoration tutorial for datasets to train ML models
 
 This is a machine learning tutorial on cleaning audio datasets for use in ML models. It is a personal, self-taught ML project developed in Google Colab using Python; the documentation was created after development.
 
-- Noise Cleaning for Audio Datasets v2.pdf
+- [Noise Cleaning for Audio Datasets v2.pdf](https://github.com/Faridacoding/API-and-AI-Documentation-Samples/blob/main/Noise%20Cleaning%20for%20Audio%20Datasets%20v2.pdf) 
 
 ### 4. Gen AI API product documentation
 
 This is a sample API documentation for a Gen AI product &mdash;Kadinsky 2.2&mdash; image generator. It takes the text input and generates an image based on the provided text input. 
 
-- Kandinsky-2.2 AI image generator API reference documentation.pdf
+- [Kandinsky-2.2 AI image generator API reference documentation.pdf](https://github.com/Faridacoding/API-and-AI-Documentation-Samples/blob/main/Kandinsky-2.2%20AI%20image%20generator%20API%20reference%20documentation.pdf)
 
 ### 5. Blog writing for a Deep Learning ML model
 
