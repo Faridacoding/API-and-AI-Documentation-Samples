@@ -33,7 +33,7 @@ This is a blog article for a Deep Learning model to increase the resolution of d
 - [Enhancing Drone Imagery with Super-Resolution Using Deep Learning](https://omdena.com/blog/enhancing-drone-imagery-with-super-resolution-using-deep-learning)
 
 
-### Docs-as-code sample (AI/ML)
+### 6. Docs-as-code sample (AI/ML)
 
 - [MLflow tracking for Machine learning models](https://github.com/Faridacoding/API-and-AI-Documentation-Samples/blob/main/Tutorial%20video%20sample/Video_Tutorial_for_executing_MLflow.ipynb) 
 
