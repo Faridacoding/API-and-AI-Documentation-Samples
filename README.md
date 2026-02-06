@@ -35,7 +35,8 @@ This is a blog article for a Deep Learning model to increase the resolution of d
 
 ### Docs-as-code sample (AI/ML)
 
-- [MLflow tracking for Machine learning models]()
+- [MLflow tracking for Machine learning models](https://github.com/Faridacoding/API-and-AI-Documentation-Samples/blob/main/Tutorial%20video%20sample/Video_Tutorial_for_executing_MLflow.ipynb) 
+
 
 
 
