@@ -37,6 +37,8 @@ This is a sample API documentation for a Gen AI product &mdash;Kadinsky 2.2&mdas
 
 - [MLflow tracking for Machine learning models](https://github.com/Faridacoding/API-and-AI-Documentation-Samples/blob/main/Tutorial%20video%20sample/Video_Tutorial_for_executing_MLflow.ipynb)
 
+- [Prompt Engineering Guide with open API](https://github.com/Faridacoding/API-and-AI-Documentation-Samples/blob/main/Docs_as_code_Prompt_Engineering_Guide.ipynb)
+
 
 
 
