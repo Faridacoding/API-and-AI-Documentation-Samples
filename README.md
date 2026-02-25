@@ -18,7 +18,7 @@ This API documentation is for a web-based product — SoundCloud — an audio st
 
 This is a machine learning tutorial on cleaning audio datasets for use in ML models. It is a personal, self-taught ML project developed in Google Colab using Python; the documentation was created after development.
 
-- [Noise Cleaning for Audio Datasets v3.pdf](https://github.com/Faridacoding/API-and-AI-Documentation-Samples/blob/main/Noise%20Cleaning%20for%20Audio%20Datasets%20v3.pdf) 
+- [Noise Cleaning for Audio Datasets v3.pdf](https://github.com/Faridacoding/API-and-AI-Documentation-Samples/blob/main/Pre-processing%20Audio%20Datasets%20v3.pdf) 
 
 ### 4. Gen AI API product documentation
 
